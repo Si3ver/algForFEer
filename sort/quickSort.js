@@ -3,7 +3,7 @@ Array.prototype.quickSort1 = function(){
     function partition(arr, left, right){
         if(left < right){
             var x = arr[right], i = left - 1, tmp;
-            console.log(x, i, tmp);
+            console.log(x, i);
             for(var j = left; j <= right; ++j){
                 if(arr[j] <= x){
                     ++i;
@@ -21,6 +21,7 @@ Array.prototype.quickSort1 = function(){
 };
 // 二、非递归写法
 Array.prototype.quickSort2 = function(){
+    // 待补充
     return this;
 };
 

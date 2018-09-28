@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>document.write() example</title>
+</head>
+<body>
+    <p>Some original document content.</p>
+    <script>
+    window.onload = function() {
+        alert("load new content");
+        document.open();
+        document.write("<h1>Out with the old - in with the new!</h1>");
+        document.close();
+    };
+    </script>
+</body>
+</html>
