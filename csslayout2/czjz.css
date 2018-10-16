@@ -1,0 +1,52 @@
+/* 绝对定位 + 变形位移 */
+.wrap1 {
+    position: relative;
+}
+.content1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* 绝对定位 + 负外边距 */
+.wrap2 {
+    position: relative;
+}
+.content2 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -50px;
+    margin-left: -50px;
+}
+
+/* 绝对定位 + 自动边距 */
+.wrap3 {
+    position: relative;
+}
+.content3 {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+}
+
+/* 表格内容居中 */
+.wrap4 {
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+}
+.content4 {
+    display: inline-block;
+}
+
+/* 弹性盒子 */
+.wrap5 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
