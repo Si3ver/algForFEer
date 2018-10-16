@@ -8,6 +8,7 @@ Array.prototype.bubbleSort = function(){
                 this[j+1] = tmp;
             }
         }
+        console.log(i, this);
     }
     return this;
 };
@@ -38,6 +39,7 @@ Array.prototype.selectionSort = function(){
     return this;
 };
 
-console.log([3,44,38,5,47,15,36,26,27,2,46,4,19,50,48].bubbleSort());
-console.log([3,44,38,5,47,15,36,26,27,2,46,4,19,50,48].insersionSort());
-console.log([3,44,38,5,47,15,36,26,27,2,46,4,19,50,48].selectionSort());
+// console.log([3,44,38,5,47,15,36,26,27,2,46,4,19,50,48].bubbleSort());
+// console.log([3,44,38,5,47,15,36,26,27,2,46,4,19,50,48].insersionSort());
+// console.log([3,44,38,5,47,15,36,26,27,2,46,4,19,50,48].selectionSort());
+console.log([16, 25, 37, 29, 11, 75, 32, 1].bubbleSort());
