@@ -1,21 +1,27 @@
-var responseHandler = (json) => {
-  console.log(json)
-};
-function getJSONP(url) {
-  return new Promise((resolve, reject) => {
-    if (url.indexOf('?') === -1) {
-      url += '?callback=responseHandler';
-    } else {
-      url += '&callback=responseHandler';
+// 使用script元素，发送JSONP请求
+function getJSONP(url, cb) {
+  let cbnum = "cb" + getJSONP.counter++
+  let cbname = "getJSONP." + cbnum
+
+  if (url.indexOf('?') === -1) {
+    url += "?jsonp=" + cbname
+  } else {
+    url += "&jsonp" + cbname
+  }
+  var script = document.createElement('script');
+  getJSONP[cbnum] = function(response) {
+    try {
+      cb(response)
+    } catch {
+      delete getJSONP[cbnum]
+      script.parentNode.removeChild(script)
     }
-    var script = document.createElement('script');
-    script.setAttribute('src', url)
-    document.body.appendChild(script);
-  })
+  }
+  script.setAttribute('src', url)
+  console.log(script)
+  document.body.appendChild(script);
 }
-getJSONP('https://api.douban.com/v2/movie/top250')
-  .then(
-    (ev) => { console.log(ev) }
-  ).catch(
-    (error) => { console.log(error) }
-  )
+getJSONP.counter = 0
+getJSONP('https://api.douban.com/v2/movie/top250', (resp) => {
+  console.log("resp content")
+})
