@@ -11,7 +11,7 @@ function getJSONP(url, cb) {
   var script = document.createElement('script');
   getJSONP[cbnum] = function(response) {
     try {
-      cb(response)
+      cb(response) 
     } catch {
       delete getJSONP[cbnum]
       script.parentNode.removeChild(script)
