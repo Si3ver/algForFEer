@@ -89,3 +89,25 @@
 1. 设计和实现一个LRU cache缓存机制
 
 ## 布隆过滤器
+
+## 春节7天练 | Day 1：数组和链表
+
+数组
+[M]三数求和 [015](https://leetcode-cn.com/problems/3sum/)
+[S]求众数(出现次数大于n/2次) [169](https://leetcode-cn.com/problems/majority-element/)
+[H]求缺失的第一个众数 [041](https://leetcode-cn.com/problems/first-missing-positive/)
+链表
+[S]环形链表 [141](https://leetcode-cn.com/problems/linked-list-cycle/)
+[H]合并k个排序链表 [023](https://leetcode-cn.com/problems/merge-k-sorted-lists/)
+
+## 春节7天练 | Day 2：栈、队列和递归
+
+栈
+[S]有效的括号 [020](https://leetcode-cn.com/problems/valid-parentheses/)
+[H]最长有效的括号 [032](https://leetcode-cn.com/problems/longest-valid-parentheses/)
+[M]逆波兰表达式求值 [150](https://leetcode-cn.com/problems/evaluate-reverse-polish-notation/)
+队列
+[M]设计循环双端队列 [641](https://leetcode-cn.com/problems/design-circular-deque/)
+[H]滑动窗口最大值 [239](https://leetcode-cn.com/problems/sliding-window-maximum/)
+递归
+[S]爬楼梯 [070](https://leetcode-cn.com/problems/climbing-stairs/)
